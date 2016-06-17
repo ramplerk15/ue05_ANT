@@ -5,14 +5,13 @@
 	<property name="test" value="${basedir}/test" />
 	<property name="libs" value="${basedir}/libs" />
 
-	<!-- 
-	complete these property definitions!
+	<property name="packages" value="at.fhj.swd.konfmana.*" />
 	
-	<property name="target" value=""/>
-	<property name="target.classes" value=""/>
-	<property name="target.junit" value=""/>
-	<property name="reports" value="" />
-	-->
+	<property name="target" value="${basedir}/build"/>
+	<property name="target.classes" value="${target}/classes"/>
+	<property name="target.junit" value="${target}/junit"/>
+	<property name="reports" value="${target}/docs" />
+	
 
 	<path id="junit.class.path">
 		<pathelement location="${libs}/junit.jar" />
@@ -24,6 +23,10 @@
 
 	<target name="clean">
 		<!-- delete all created artefacts -->
+		<delete includeemptydirs="true" quiet="true">
+			      <fileset dir="${target}" />
+			      <fileset dir="${docs}" />
+		    </delete>
 	</target>
 
 	<target name="prepare" depends="clean">
@@ -34,30 +37,44 @@
 		<mkdir dir="${target.classes}" />
 
 		<!-- compile sourcen to ${target.classes}-->
-
+		<echo message="Compiling." />
+		    <javac srcdir="${src}" 
+		           destdir="${target.classes}" 
+		           includeantruntime="false" />
+		
 		<mkdir dir="${target.junit}" />
 
 		<!-- compile junit tests to ${target.junit}-->
-
+		<echo message="Compiling the tests."/>   
+		    <javac srcdir="${test}" 
+		           destdir="${target.junit}"           
+		           includeantruntime="false">
+		      <classpath refid="junit.class.path" />
+		    </javac>
 	</target>
 
 	<!-- Run the JUnit Tests -->
 	<target name="junit" depends="compile">
+		<echo message="Running tests." />
 		<mkdir dir="${reports}" />
-		<!-- junit "there is an attribute missing!" fork="true" haltonfailure="yes" -->
+		<junit fork="true" showoutput="yes" haltonfailure="yes" haltonerror="no" printsummary="yes">
 		<classpath refid="junit.class.path" />
-
+			<formatter type="xml" />
 		<batchtest todir="${reports}">
 			<fileset dir="${test}">
 				<include name="**/*Test*.java" />
 			</fileset>
 		</batchtest>
-		<!-- /junit -->
+		</junit>
 	</target>
 
 	<!-- Conversion fun: transform target into HTML -->
 	<target name="reportTransform" depends="junit">
+		<echo message="Transform to HTML." />
+		<mkdir dir="${reports}/html"/>
+		
 		<junitreport todir="${reports}">
+			
 			<fileset dir="${reports}">
 				<include name="TEST-*.xml" />
 			</fileset>
@@ -66,9 +83,19 @@
 	</target>
 
 	<!-- create a javadoc target-->
-	<target name="" depends="junit">
-	</target
-
+	<target name="javadoc" depends="junit">
+		<echo message="Create javadoc." />
+			<mkdir dir="${reports}/javadoc"/>
+			<javadoc packagenames="${packages}"
+	      		sourcepath="src"
+	    		destdir="${reports}/javadoc"
+	    		defaultexcludes="yes"
+				author="true"
+	      		version="true"
+	      		use="true"
+	      		windowtitle="StringQueue">
+			</javadoc>
+		</target>
 	<!-- 
 		create a target that does 'everything'
 		compiling source
@@ -79,6 +106,14 @@
 		create Javadoc
 		zip and copy javadoc to destination folder.
 	 -->
-	
+	<target name="everything" depends="junit,reportTransform,javadoc">
+			<zip destfile="${reports}/ue05_ramplerk15_testsummary.zip"
+			  basedir="${reports}"
+				update="true" />
+			<zip destfile="${reports}/ue05_ramplerk15_doc.zip"
+			      basedir="${reports}"
+			      update="true" />
+			
+		</target>
 
 </project>
