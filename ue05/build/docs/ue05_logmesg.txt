@@ -1,3 +1,9 @@
+commit 5b16ff8edce2f6e298326a7e3fe1034b5bdc3447
+Author: ramplerk15 <kerstin.rampler@edu.fh-joanneum.at>
+Date:   Fri Jun 17 03:41:07 2016 +0200
+
+    logmessage
+
 commit 63b30a4591bff176fc8d7c4b8d0e6021c941be31
 Author: ramplerk15 <kerstin.rampler@edu.fh-joanneum.at>
 Date:   Fri Jun 17 03:33:52 2016 +0200
