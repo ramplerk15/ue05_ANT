@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="DESKTOP-AJQA8Q9" id="0" name="StringQueueTest" package="at.fhj.swd.konfmana" skipped="0" tests="9" time="0.063" timestamp="2016-06-17T01:32:14">
+  <testsuite errors="0" failures="0" hostname="DESKTOP-AJQA8Q9" id="0" name="StringQueueTest" package="at.fhj.swd.konfmana" skipped="0" tests="9" time="0.067" timestamp="2016-06-17T01:38:40">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -110,7 +110,7 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner at.fhj.swd.konfmana.StringQueueTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Marina\git\konfmana_ue05\ue05\build\docs\TEST-at.fhj.swd.konfmana.StringQueueTest.xml crashfile=C:\Users\Marina\git\konfmana_ue05\ue05\junitvmwatcher7513577052962748980.properties propsfile=C:\Users\Marina\git\konfmana_ue05\ue05\junit2731454391215003041.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner at.fhj.swd.konfmana.StringQueueTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Marina\git\konfmana_ue05\ue05\build\docs\TEST-at.fhj.swd.konfmana.StringQueueTest.xml crashfile=C:\Users\Marina\git\konfmana_ue05\ue05\junitvmwatcher8546534554571291478.properties propsfile=C:\Users\Marina\git\konfmana_ue05\ue05\junit8288832109147279380.properties" />
 
           <property name="java.class.path" value="C:\Users\Marina\git\konfmana_ue05\ue05\libs\junit.jar;C:\Users\Marina\git\konfmana_ue05\ue05\libs\org.hamcrest.core_1.3.0.v201303031735.jar;C:\Users\Marina\git\konfmana_ue05\ue05\build\classes;C:\Users\Marina\git\konfmana_ue05\ue05\build\junit;C:\Users\Marina\Downloads\eclipse-jee-mars-2-win32-x86_64\eclipse\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-launcher.jar;C:\Users\Marina\Downloads\eclipse-jee-mars-2-win32-x86_64\eclipse\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant.jar;C:\Users\Marina\Downloads\eclipse-jee-mars-2-win32-x86_64\eclipse\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-junit.jar;C:\Users\Marina\Downloads\eclipse-jee-mars-2-win32-x86_64\eclipse\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-junit4.jar" />
 
@@ -160,7 +160,7 @@
 
       <testcase classname="at.fhj.swd.konfmana.StringQueueTest" name="testElement" time="0.002" />
 
-      <testcase classname="at.fhj.swd.konfmana.StringQueueTest" name="testNegativeMaxQueueSize" time="0.0" />
+      <testcase classname="at.fhj.swd.konfmana.StringQueueTest" name="testNegativeMaxQueueSize" time="0.001" />
 
       <testcase classname="at.fhj.swd.konfmana.StringQueueTest" name="testOfferPoll" time="0.0" />
 
@@ -170,7 +170,7 @@
 
       <testcase classname="at.fhj.swd.konfmana.StringQueueTest" name="testPoll" time="0.0" />
 
-      <testcase classname="at.fhj.swd.konfmana.StringQueueTest" name="testQueueTooSmall" time="0.0" />
+      <testcase classname="at.fhj.swd.konfmana.StringQueueTest" name="testQueueTooSmall" time="0.001" />
 
       <testcase classname="at.fhj.swd.konfmana.StringQueueTest" name="testZeroMaxQueueSize" time="0.0" />
 

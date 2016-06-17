@@ -1,0 +1,29 @@
+commit 63b30a4591bff176fc8d7c4b8d0e6021c941be31
+Author: ramplerk15 <kerstin.rampler@edu.fh-joanneum.at>
+Date:   Fri Jun 17 03:33:52 2016 +0200
+
+    BUILD SUCCESSFUL
+
+commit 88df1b111b27642446e8772f4b0987b0f96a187e
+Author: ramplerk15 <kerstin.rampler@edu.fh-joanneum.at>
+Date:   Fri Jun 17 02:39:22 2016 +0200
+
+    all tests green
+
+commit 967036ef47b09524d0cb2fdeb615e03e2ec25f7f
+Author: ramplerk15 <kerstin.rampler@edu.fh-joanneum.at>
+Date:   Fri Jun 17 02:28:46 2016 +0200
+
+    second initial commit
+
+commit 4d135f575c4b7a43e3e6e9d564898ec19f7845eb
+Author: ramplerk15 <kerstin.rampler@edu.fh-joanneum.at>
+Date:   Wed Jun 15 21:48:31 2016 +0200
+
+    all tests green
+
+commit e541fbe64414af0b439abff815ec47facf5bbbcd
+Author: ramplerk15 <kerstin.rampler@edu.fh-joanneum.at>
+Date:   Fri Jun 10 16:51:51 2016 +0200
+
+    initial commit
