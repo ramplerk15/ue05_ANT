@@ -84,7 +84,7 @@ public class StringQueueTest {
 	/**
 	 * What do you expect?
 	 */
-	@Test 
+	@Test (expected=IllegalArgumentException.class)
 	public void testZeroMaxQueueSize(){
 		queue = new StringQueue(0);
 	}
@@ -92,7 +92,7 @@ public class StringQueueTest {
 	/**
 	 * What do you expect?
 	 */
-	@Test 
+	@Test (expected=IllegalArgumentException.class)
 	public void testNegativeMaxQueueSize(){
 		queue = new StringQueue(-1);
 	}
@@ -105,7 +105,7 @@ public class StringQueueTest {
 	@Test
 	public void testQueueTooSmall() {
 		queue = new StringQueue();	// creates a Queue with maxSize = 1
-		fail("test not implemented yet!");
+		assertEquals (true, queue.offer("Element1"));
+		assertEquals (false, queue.offer("Element2"));
 	}
-
 }
